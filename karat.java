@@ -4,16 +4,16 @@ import java.util.*;
 public class karat {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        System.out.println("enter 1st number");
+        System.out.println("Enter the first number");
         String a = sc.nextLine();
-        System.out.println("enter 2nd number");
+        System.out.println("Enter the second number");
         String b = sc.nextLine();
         System.out.println(multiply(a,b));
 
     }
 
     public static String multiply(String a , String b)
-    {
+    {	//first we will check if the lengths are equal or not.If not we make them equal.
         String p = "";
         int l1 = a.length();
         int l2 = b.length();
@@ -38,7 +38,6 @@ public class karat {
             n=l2;
         }
 
-        //System.out.println(a);
         if(n==1)
         {
             p = Integer.toString((a.charAt(0)-'0')*(b.charAt(0)-'0'));
@@ -46,7 +45,7 @@ public class karat {
         }
 
         else
-        {
+        { //dividing into substring and then combining
             String al = a.substring(0,n/2);
             String ar = a.substring(n/2,n);
             String bl = b.substring(0,n/2);
@@ -77,7 +76,7 @@ public class karat {
     }
 
     public static String add(String a , String b)
-    {
+    {	//addition of two integers in the form of strings
         int n=0;
         int l1 = a.length();
         int l2 = b.length();
